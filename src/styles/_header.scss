@@ -1,0 +1,87 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #ffffff;
+
+    &__info {
+        width: 214px;
+        font-size: 27px;
+        line-height: 50px;
+        color: #FFF;
+        background: #4aae54;
+        padding: 0 15px;
+        position: absolute;
+        top: 69px;
+        text-align: center;
+    }
+
+    .site-wrapper {
+        @include flex(flex-start, center, nowrap);
+        height: 70px;
+        max-width: 100%;
+        padding: 0 75px;
+    }
+
+    &__logo {
+        display: block;
+        width: 214px;
+        height: 68px;
+        position: relative;
+        flex-grow: 0;
+        flex-shrink: 0;
+        left: 0;
+        top: 0;
+        text-decoration: none;
+
+        background: url(../assets/images/logo.jpg) no-repeat center;
+        background-size: contain;
+    }
+
+    .header-nav {
+        @include flex(center, center, nowrap);
+        @include list-unstyled;
+        flex-grow: 1;
+        margin-left: 150px;
+
+        &__item {
+            color: #6950a1;
+            margin-left: 35px;
+
+            &:first-child {
+                margin-right: auto;
+            }
+
+            &.mg-r-auto {
+                margin-right: auto;
+            }
+        }
+        &__link {
+            @include link-unstyled;
+            color: inherit;
+            color: #000000;
+            white-space: nowrap;
+
+            &:hover {
+                color: #4aae54;
+            }
+
+            &.active {
+                color: #000000;
+                font-weight: normal;
+            }
+
+            &--phone {
+                margin-left: auto;
+                font-size: 24px;
+            }
+
+            &.btn {
+                color: #FFF;
+            }
+        }
+    }
+}
+
